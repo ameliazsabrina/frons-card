@@ -182,7 +182,7 @@ const PillNav: React.FC<PillNavProps> = ({
     gsap.set(img, { rotate: 0 });
     logoTweenRef.current = gsap.to(img, {
       rotate: 360,
-      duration: 0.2,
+      duration: 1,
       ease,
       overwrite: "auto",
     });

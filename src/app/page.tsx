@@ -28,13 +28,14 @@ export default function Home() {
 
   return (
     <div id="smooth-wrapper">
-      <div id="smooth-content">
+      <div id="smooth-content" className="min-h-screen">
         <Navbar />
         <Hero />
         <About />
         <HowItWorks />
-        <SEO />
+        {/* <SEO /> */}
         <Footer />
+        <div className="h-32 md:h-0"></div>
       </div>
     </div>
   );

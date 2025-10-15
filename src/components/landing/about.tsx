@@ -61,7 +61,7 @@ export default function About() {
               duration: 0.8,
               ease: "power2.out",
               scrollTrigger: {
-                trigger: paragraph.closest('.faq-item'),
+                trigger: paragraph.closest(".faq-item"),
                 start: "top 80%",
                 end: "bottom 20%",
                 toggleActions: "play none none reverse",
@@ -101,12 +101,16 @@ export default function About() {
   return (
     <>
       <Separator />
-      <section ref={sectionRef} className="bg-neutral-100 py-16">
+      {/* Desktop About Section */}
+      <section
+        ref={sectionRef}
+        className="hidden md:block bg-neutral-100 py-16"
+      >
         <div className="mx-auto max-w-4xl px-8 flex flex-grid grid-cols-2 gap-24 items-start justify-between">
           <div ref={headerRef} className="flex items-center gap-3 mb-16">
             <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
             <h2 className="text-gray-600 text-lg font-medium">
-              Why You Need It
+              Kenapa Harus Punya?
             </h2>
           </div>
 
@@ -115,21 +119,26 @@ export default function About() {
               <span className="text-[#16007E] text-xl font-bold">(01)</span>
               <div className="flex-1">
                 <h3 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
-                  Seamless Sharing
+                  Sharing Menjadi Mudah
                 </h3>
                 <div className="overflow-hidden">
-                  <p 
-                    ref={(el) => { if (el) paragraphRefs.current[0] = el; }}
+                  <p
+                    ref={(el) => {
+                      if (el) paragraphRefs.current[0] = el;
+                    }}
                     className="text-lg text-gray-600 leading-relaxed max-w-2xl"
                   >
-                    No more typing long links, one tap is enough.
+                    Ga perlu ribet ketik link panjang lagi. Tinggal ketuk, semua
+                    info langsung kebuka.
                   </p>
                 </div>
               </div>
             </div>
 
-            <div 
-              ref={(el) => { if (el) lineRefs.current[0] = el; }}
+            <div
+              ref={(el) => {
+                if (el) lineRefs.current[0] = el;
+              }}
               className="h-px bg-gray-300"
             ></div>
 
@@ -137,21 +146,25 @@ export default function About() {
               <span className="text-[#16007E] text-xl font-bold">(02)</span>
               <div className="flex-1">
                 <h3 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
-                  Professional Image
+                  Kesan Profesional
                 </h3>
                 <div className="overflow-hidden">
-                  <p 
-                    ref={(el) => { if (el) paragraphRefs.current[1] = el; }}
+                  <p
+                    ref={(el) => {
+                      if (el) paragraphRefs.current[1] = el;
+                    }}
                     className="text-lg text-gray-600 leading-relaxed max-w-2xl"
                   >
-                    Stand out with a modern, academic-focused identity card.
+                    Bikin kesan wow dengan kartu modern khusus dunia akademik.
                   </p>
                 </div>
               </div>
             </div>
 
-            <div 
-              ref={(el) => { if (el) lineRefs.current[1] = el; }}
+            <div
+              ref={(el) => {
+                if (el) lineRefs.current[1] = el;
+              }}
               className="h-px bg-gray-300"
             ></div>
 
@@ -159,22 +172,26 @@ export default function About() {
               <span className="text-[#16007E] text-xl font-bold">(03)</span>
               <div className="flex-1">
                 <h3 className="text-4xl font-bold text-gray-900 mb-6 leading-tight">
-                  Update Every 5 Years
+                  Selalu Update
                 </h3>
                 <div className="overflow-hidden">
-                  <p 
-                    ref={(el) => { if (el) paragraphRefs.current[2] = el; }}
+                  <p
+                    ref={(el) => {
+                      if (el) paragraphRefs.current[2] = el;
+                    }}
                     className="text-lg text-gray-600 leading-relaxed max-w-2xl"
                   >
-                    Profile links can be updated anytime — your card never goes
-                    out of date.
+                    Info profil bisa diupdate kapan saja — kartunya ga pernah
+                    kedaluwarsa.
                   </p>
                 </div>
               </div>
             </div>
 
-            <div 
-              ref={(el) => { if (el) lineRefs.current[2] = el; }}
+            <div
+              ref={(el) => {
+                if (el) lineRefs.current[2] = el;
+              }}
               className="h-px bg-gray-300"
             ></div>
 
@@ -182,18 +199,92 @@ export default function About() {
               <span className="text-[#16007E] text-xl font-bold">(04)</span>
               <div className="flex-1">
                 <h3 className="text-4xl font-bold text-gray-900 mb-6 leading-tight">
-                  Made for Academia
+                  Cocok Untuk Akademisi
                 </h3>
                 <div className="overflow-hidden">
-                  <p 
-                    ref={(el) => { if (el) paragraphRefs.current[3] = el; }}
+                  <p
+                    ref={(el) => {
+                      if (el) paragraphRefs.current[3] = el;
+                    }}
                     className="text-lg text-gray-600 leading-relaxed max-w-2xl"
                   >
-                    Perfect for students, researchers, lecturers, and
-                    professionals in education.
+                    Cocok banget buat mahasiswa, peneliti, dosen, dan semua yang
+                    berkecimpung di dunia pendidikan.
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mobile About Section */}
+      <section className="md:hidden bg-neutral-100 py-16">
+        <div className="mx-auto max-w-lg px-8">
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
+              <h2 className="text-gray-600 text-lg font-medium">
+                Kenapa Harus Punya?
+              </h2>
+            </div>
+          </div>
+
+          <div className="space-y-8">
+            <div className="text-center">
+              <span className="text-[#16007E] text-lg font-bold mb-4 block">
+                (01)
+              </span>
+              <h3 className="text-3xl font-bold text-gray-900 mb-4 leading-tight">
+                Seamless Sharing
+              </h3>
+              <p className="text-base text-gray-600 leading-relaxed">
+                No more typing long links, one tap is enough.
+              </p>
+            </div>
+
+            <div className="h-px bg-gray-300"></div>
+
+            <div className="text-center">
+              <span className="text-[#16007E] text-lg font-bold mb-4 block">
+                (02)
+              </span>
+              <h3 className="text-3xl font-bold text-gray-900 mb-4 leading-tight">
+                Professional Image
+              </h3>
+              <p className="text-base text-gray-600 leading-relaxed">
+                Stand out with a modern, academic-focused identity card.
+              </p>
+            </div>
+
+            <div className="h-px bg-gray-300"></div>
+
+            <div className="text-center">
+              <span className="text-[#16007E] text-lg font-bold mb-4 block">
+                (03)
+              </span>
+              <h3 className="text-3xl font-bold text-gray-900 mb-4 leading-tight">
+                Update Every 5 Years
+              </h3>
+              <p className="text-base text-gray-600 leading-relaxed">
+                Info profil bisa diupdate kapan saja — kartunya ga pernah
+                kedaluwarsa.
+              </p>
+            </div>
+
+            <div className="h-px bg-gray-300"></div>
+
+            <div className="text-center">
+              <span className="text-[#16007E] text-lg font-bold mb-4 block">
+                (04)
+              </span>
+              <h3 className="text-3xl font-bold text-gray-900 mb-4 leading-tight">
+                Made for Academia
+              </h3>
+              <p className="text-base text-gray-600 leading-relaxed">
+                Cocok banget buat mahasiswa, peneliti, dosen, dan semua yang
+                berkecimpung di dunia pendidikan.
+              </p>
             </div>
           </div>
         </div>

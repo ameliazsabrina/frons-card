@@ -15,8 +15,8 @@ export default function Footer() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const subject = "Contact from Fronsciers Website";
-    const body = `Hello Fronsciers team,\n\nI'm interested in learning more about your platform.\n\nBest regards,\n${email}`;
+    const subject = "Halo dari Website Fronsciers";
+    const body = `Halo tim Fronsciers,\n\nAku tertarik nih sama platform kalian. Boleh dong ceritain lebih detail?\n\nThanks,\n${email}`;
     const mailtoLink = `mailto:fronsciers@gmail.com?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(body)}`;
@@ -25,14 +25,14 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-white">
-      <div className="bg-primary rounded-t-3xl overflow-hidden mx-4">
+    <footer className="bg-white md:pb-0">
+      <div className="bg-primary rounded-t-3xl overflow-hidden mx-4 mb-8 md:mb-4">
         <div className="py-16 px-6 max-w-3xl mx-auto">
           <div className="flex flex-col items-center text-center space-y-6">
             <div className="flex items-center">
               <Image
                 src="/logowhite.svg"
-                alt="Fronsciers Logo"
+                alt="Logo Fronsciers"
                 width={40}
                 height={40}
                 className="rounded-md w-40 h-40"
@@ -41,10 +41,10 @@ export default function Footer() {
 
             <div className="space-y-2">
               <h3 className="text-2xl lg:text-3xl font-semibold text-white leading-tight ">
-                Get started with revolutionary academic publishing
+                Yuk mulai terhubung dengan dunia akademik!
               </h3>
               <p className="text-white/80 text-lg">
-                Contact us to learn more about blockchain-powered peer review
+                Penasaran sama peer review pakai blockchain? Hubungi kami
               </p>
             </div>
 
@@ -54,7 +54,7 @@ export default function Footer() {
                   <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
                   <Input
                     type="email"
-                    placeholder="Enter your email"
+                    placeholder="Email Anda"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
@@ -62,7 +62,7 @@ export default function Footer() {
                   />
                 </div>
                 <Button type="submit" variant="outline" className="h-12">
-                  Contact Now
+                  Kirim
                 </Button>
               </div>
             </form>
